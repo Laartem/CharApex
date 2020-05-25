@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,36 +28,54 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private SharedPreferences sharedPreferences;
+    private Gson gson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       showList();
-       makeApiCall();
+
+        sharedPreferences = getSharedPreferences("db_esiea", Context.MODE_PRIVATE);
+        gson = new GsonBuilder()
+                .setLenient()
+                .create();
+        List<Legends> legendsList = getDataFromCache();
+        if(legendsList != null){
+            showList(legendsList);
+        }else {
+            makeApiCall();
+        }
     }
 
-    private void showList() {
+    private List<Legends> getDataFromCache() {
+        String jsonLegend = sharedPreferences.getString("jsonLegendList", null);
+
+        if (jsonLegend == null){
+            return null;
+        }else{
+            Type listType = new TypeToken<List<Legends>>(){}.getType();
+            return gson.fromJson(jsonLegend, listType);
+        }
+
+
+    }
+
+    private void showList(List<Legends> legendsList) {
         recyclerView = (RecyclerView) findViewById(R.id.Recycler_View);
         recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        List<String> input = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            input.add("Test" + i);
-        }// define an adapter
-        mAdapter = new ListAdapter(input);
+
+
+        // define an adapter
+        mAdapter = new ListAdapter(legendsList);
         recyclerView.setAdapter(mAdapter);
     }
 
 
 
     private void makeApiCall(){
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
@@ -67,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Legends>> call, Response<List<Legends>> response) {
                 if (response.isSuccessful() && response.body() != null){
                     List<Legends> LegList = response.body();
-                    Toast.makeText(getApplicationContext(), "API Success", Toast.LENGTH_SHORT).show();
+                    saveList(LegList);
+                    showList(LegList);
                 }else{
                     showError();
                 }
@@ -79,6 +102,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void saveList(List<Legends> legList) {
+        String jsonString = gson.toJson(legList);
+        sharedPreferences
+                .edit()
+                .putString("jsonLegendList", jsonString)
+                .apply();
+
+        Toast.makeText(getApplicationContext(), "List saved !", Toast.LENGTH_SHORT).show();
     }
 
     private void showError() {
