@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
         MozambiqueHere moz = retrofit.create(MozambiqueHere.class);
 
-        Call<ApiResponse> call = moz.getLegendsList();
-        call.enqueue(new Callback<ApiResponse>() {
+        Call<List<Legends>> call = moz.getLegendsList();
+        call.enqueue(new Callback<List<Legends>>() {
             @Override
-            public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
-                if(response.isSuccessful() && response.body() != null){
-                    List<Legends> legendsList = response.body().getApexLegends();
+            public void onResponse(Call<List<Legends>> call, Response<List<Legends>> response) {
+                if (response.isSuccessful() && response.body() != null){
+                    List<Legends> LegList = response.body();
                     Toast.makeText(getApplicationContext(), "API Success", Toast.LENGTH_SHORT).show();
                 }else{
                     showError();
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ApiResponse> call, Throwable t) {
+            public void onFailure(Call<List<Legends>> call, Throwable t) {
                 showError();
 
             }
