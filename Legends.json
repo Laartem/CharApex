@@ -1,0 +1,236 @@
+[
+    {
+        "name": "Bangalore",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Smoke Launcher",
+            "description": "Fire a high-velocity smoke canister that explodes into a smoke wall on impact."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Double Time",
+            "description": "Taking fire while sprinting makes you move faster for a brief time."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Rolling Thunder",
+            "description": "Call in an artillery strike that slowly creeps across the landscape."
+        }
+    },
+    {
+        "name": "Bloodhound",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Eye of the Allfather",
+            "description": "Briefly reveal hidden enemies, traps, and clues throughout structures in front of you."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Tracker",
+            "description": "See tracks left behind by your foes."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Beast of the Hunt",
+            "description": "Enhances your senses, allowing you move faster and highlighting your prey."
+        }
+    },
+    {
+        "name": "Caustic",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Nox Gas Trap",
+            "description": "Drop canisters that release deadly Nox gas when shot or triggered by enemies."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Nox Vision",
+            "description": "Allows you to see enemies through your gas."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Nox Gas Grenade",
+            "description": "Blankets a large area in Nox gas. Damage increases the longer an enemy is inside of it."
+        }
+    },
+    {
+        "name": "Gibraltar",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Dome of Protection",
+            "description": "Throw down a dome-shield that blocks attacks for 15 seconds. Players inside of the dome heal faster."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Gun Shield",
+            "description": "Aiming down sights deploys a gun shield that blocks incoming fire."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Defensive Bombardment",
+            "description": "Call in a concentrated mortar strike on a marked position."
+        }
+    },
+    {
+        "name": "Lifeline",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "D.O.C. Heal Drone",
+            "description": "Call your Drone of Compassion to automatically heal nearby teammates over time."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Combat Medic",
+            "description": "Revive knocked down teammates faster while protected by a shield wall. Healing items are used 25% faster."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Care Package",
+            "description": "Call in a drop pod full of high-quality defensive gear."
+        }
+    },
+    {
+        "name": "Mirage",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Psyche Out",
+            "description": "Send out a holographic decoy to confuse the enemy."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Encore!",
+            "description": "Automatically drop a decoy and cloak for five seconds when knocked down. Mirage also cloaks while using a respawn beacon and reviving a teammate (the teammate is also cloaked)."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Vanishing Act",
+            "description": "Deploy a team of Decoys to distract enemies while you cloak."
+        }
+    },
+    {
+        "name": "Pathfinder",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Grappling Hook",
+            "description": "Grapple to get to out-of-reach places quickly."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Insider Knowledge",
+            "description": "Scan a survey beacon to reveal the ring’s next location."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Zipline Gun",
+            "description": "Create a zipline for everyone to use."
+        }
+    },
+    {
+        "name": "Wraith",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Into the Void",
+            "description": "Reposition quickly through the safety of void space, avoiding all damage."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Voices from the Void",
+            "description": "A voice warns you when danger approaches. As far as you can tell, it’s on your side."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Dimensional Rift",
+            "description": "Link two locations with portals for 60 seconds, allowing your entire team to use them."
+        }
+    },
+    {
+        "name": "Octane",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Stim",
+            "description": "Move 30% faster for six seconds. Costs health to use."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Swift Mend",
+            "description": "Automatically restores health over time."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Launch Pad",
+            "description": "Deploy a jump pad that catapults teammates through the air."
+        }
+    },
+    {
+        "name": "Wattson",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Perimeter Security",
+            "description": "Connect nodes to create electrified fences that damage and slow enemies."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Spark of Genius",
+            "description": "Ultimate Accelerants fully charge your Ultimate Ability, and standing near interception pylons boosts your Tactical Ability recharge."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Interception Pylon",
+            "description": "Place an electrified pylon that destroys incoming ordnance and repairs damaged shields as long as it stands."
+        }
+    },
+    {
+        "name": "Crypto",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Surveillance Drone",
+            "description": "Deploy an aerial camera drone. 40 second cooldown if destroyed."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Neurolink",
+            "description": "Crypto and his teammates see what his Surveillance Drone detects up to a 30m distance."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Drone EMP",
+            "description": "Charge up an EMP from your drone. The blast deals 50 shield damage, slows players, and destroys traps."
+        }
+    },
+    {
+        "name": "Revenant",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Silence",
+            "description": "Throw a device that deals damage and disables enemy abilities for 10 seconds."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Stalker",
+            "description": "You crouch walk faster and can climb walls higher. Crouch-walking speed is the same as his walking speed. Can climb walls twice as high."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Death Totem",
+            "description": "Drop a totem that protects users from death. Instead of getting killed of downed, you will return to the totem."
+        }
+    },
+    {
+        "name": "Loba",
+        "ability_1": {
+            "type": "Tactical Ability",
+            "name": "Burglar's Best Friend",
+            "description": "Teleport to hard-to-reach places or escape trouble quickly by throwing your Jump Drive bracelet."
+        },
+        "ability_2": {
+            "type": "Passive Ability",
+            "name": "Eye for quality",
+            "description": "Nearby epic and Legendary loot can be seen through walls. The range is the same as Black Market Boutique."
+        },
+        "ability_3": {
+            "type": "Ultimate Ability",
+            "name": "Black Market Boutique",
+            "description": "Place a portable device that allows you to teleport nearby loot to your inventory. Each friendly or enemy Legend can take up to two items."
+        }
+    }
+]
