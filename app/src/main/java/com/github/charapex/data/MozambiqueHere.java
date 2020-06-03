@@ -1,4 +1,6 @@
-package com.github.charapex;
+package com.github.charapex.data;
+
+import com.github.charapex.model.Legends;
 
 import java.util.List;
 

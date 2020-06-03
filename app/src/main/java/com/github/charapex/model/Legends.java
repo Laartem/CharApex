@@ -1,6 +1,4 @@
-package com.github.charapex;
-
-import java.util.List;
+package com.github.charapex.model;
 
 public class Legends {
     private String name;
