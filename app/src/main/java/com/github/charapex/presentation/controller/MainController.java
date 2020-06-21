@@ -1,15 +1,12 @@
-package com.github.charapex.controller;
+package com.github.charapex.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.widget.Toast;
 
-import com.github.charapex.Constants;
-import com.github.charapex.data.MozambiqueHere;
-import com.github.charapex.model.Legends;
-import com.github.charapex.view.MainActivity;
+import com.github.charapex.Singletons;
+import com.github.charapex.presentation.model.Legends;
+import com.github.charapex.presentation.view.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -18,8 +15,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainController {
 
@@ -46,14 +41,7 @@ public class MainController {
     }
 
     private void makeApiCall(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        MozambiqueHere moz = retrofit.create(MozambiqueHere.class);
-
-        Call<List<Legends>> call = moz.getLegendsList();
+        Call<List<Legends>> call = Singletons.getMozambiqueHereInstance().getLegendsList();
         call.enqueue(new Callback<List<Legends>>() {
             @Override
             public void onResponse(Call<List<Legends>> call, Response<List<Legends>> response) {

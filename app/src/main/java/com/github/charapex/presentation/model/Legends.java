@@ -1,4 +1,6 @@
-package com.github.charapex.model;
+package com.github.charapex.presentation.model;
+
+import com.github.charapex.presentation.model.Abilities;
 
 public class Legends {
     private String name;

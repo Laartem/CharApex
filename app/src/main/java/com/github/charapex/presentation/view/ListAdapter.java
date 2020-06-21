@@ -1,4 +1,4 @@
-package com.github.charapex.view;
+package com.github.charapex.presentation.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.charapex.R;
-import com.github.charapex.model.Legends;
+import com.github.charapex.presentation.model.Legends;
 
 import java.util.List;
 

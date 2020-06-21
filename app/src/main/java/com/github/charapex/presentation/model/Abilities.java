@@ -1,4 +1,4 @@
-package com.github.charapex.model;
+package com.github.charapex.presentation.model;
 
 class Abilities {
     private String type;

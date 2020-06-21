@@ -1,6 +1,6 @@
 package com.github.charapex.data;
 
-import com.github.charapex.model.Legends;
+import com.github.charapex.presentation.model.Legends;
 
 import java.util.List;
 
