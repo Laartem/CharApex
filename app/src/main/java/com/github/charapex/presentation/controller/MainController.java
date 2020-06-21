@@ -85,6 +85,7 @@ public class MainController {
 
     }
     public void onItemClick(Legends legends){
+        view.navigateToDetails(legends);
 
     }
 

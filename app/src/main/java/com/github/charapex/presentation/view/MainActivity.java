@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -12,7 +11,6 @@ import com.github.charapex.R;
 import com.github.charapex.Singletons;
 import com.github.charapex.presentation.controller.MainController;
 import com.github.charapex.presentation.model.Legends;
-import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
@@ -46,10 +44,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         // define an adapter
-        mAdapter = new ListAdapter(legendsList);
+        mAdapter = new ListAdapter(legendsList, new ListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Legends item) {
+                controller.onItemClick(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
         public void showError() {
         Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
+    }
+
+    public void navigateToDetails(Legends legends) {
+        Toast.makeText(getApplicationContext(), "TODO : Navigate", Toast.LENGTH_SHORT).show();
     }
 }
