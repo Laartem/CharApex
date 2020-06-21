@@ -4,7 +4,7 @@
 Projet de programmation mobile, dans lequel il faut créer une application qui affiche une liste (cf Consignes respectées pour plus de détails). Ici on affiche une liste des personnages du jeu vidéo Apex Legends.
 
 ## Prérequis
-*Installer Android Studio
+* Installer Android Studio
 * Récupérer la branche master
 
 ## Consignes respectées
