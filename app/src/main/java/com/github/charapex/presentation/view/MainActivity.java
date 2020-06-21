@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.github.charapex.R;
 import com.github.charapex.Singletons;
 import com.github.charapex.presentation.controller.MainController;
+import com.github.charapex.presentation.model.Abilities;
 import com.github.charapex.presentation.model.Legends;
 
 import java.util.List;
@@ -57,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(Legends legends) {
-        Toast.makeText(getApplicationContext(), "TODO : Navigate", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(MainActivity.this, LegendsDetailActivity.class);
+        myIntent.putExtra("legendsKeyName", Singletons.getGson().toJson(legends));
+        myIntent.putExtra("Ability1Name", Singletons.getGson().toJson(legends));
+
+
+        MainActivity.this.startActivity(myIntent);
     }
+
 }

@@ -1,6 +1,6 @@
 package com.github.charapex.presentation.model;
 
-class Abilities {
+public class Abilities {
     private String type;
     private String name;
     private String description;

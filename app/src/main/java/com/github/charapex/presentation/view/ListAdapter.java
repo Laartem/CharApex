@@ -73,7 +73,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         // - replace the contents of the view with that element
         final Legends currentLegend = values.get(position);
         holder.txtHeader.setText(currentLegend.getName());
-        holder.txtFooter.setText("Footer: " + currentLegend.getName());
+        holder.txtFooter.setText("Click here to learn more about " + currentLegend.getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
