@@ -21,4 +21,4 @@ Projet de programmation mobile, dans lequel il faut créer une application qui a
 
 ##Fonctionnalités
 ### Premier écran
-![alt text](https://github.com/Laartem/Char/blob/master/Images Readme/Screenshot_1592777377.png?raw=true)
+![Splash Screen](https://github.com/Laartem/CharApex/blob/master/Images%20Readme/Screenshot_1592777377.png)
