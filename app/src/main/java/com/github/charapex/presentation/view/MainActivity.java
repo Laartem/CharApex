@@ -60,8 +60,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void navigateToDetails(Legends legends) {
         Intent myIntent = new Intent(MainActivity.this, LegendsDetailActivity.class);
-        myIntent.putExtra("legendsKeyName", Singletons.getGson().toJson(legends));
-        myIntent.putExtra("Ability1Name", Singletons.getGson().toJson(legends));
+        myIntent.putExtra("legendsName", Singletons.getGson().toJson(legends));
+        myIntent.putExtra("Ability1Type", Singletons.getGson().toJson(legends.getAbility_1().getType()));
+        myIntent.putExtra("Ability1Name", Singletons.getGson().toJson(legends.getAbility_1().getName()));
+        myIntent.putExtra("Ability1Desc", Singletons.getGson().toJson(legends.getAbility_1().getDescription()));
+        myIntent.putExtra("Ability2Type", Singletons.getGson().toJson(legends.getAbility_2().getType()));
+        myIntent.putExtra("Ability2Name", Singletons.getGson().toJson(legends.getAbility_2().getName()));
+        myIntent.putExtra("Ability2Desc", Singletons.getGson().toJson(legends.getAbility_2().getDescription()));
+        myIntent.putExtra("Ability3Type", Singletons.getGson().toJson(legends.getAbility_3().getType()));
+        myIntent.putExtra("Ability3Name", Singletons.getGson().toJson(legends.getAbility_3().getName()));
+        myIntent.putExtra("Ability3Desc", Singletons.getGson().toJson(legends.getAbility_3().getDescription()));
 
 
         MainActivity.this.startActivity(myIntent);

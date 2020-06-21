@@ -24,15 +24,35 @@ public class LegendsDetailActivity extends AppCompatActivity {
 
         txtDetail = findViewById(R.id.detail_txt);
         Intent intent = getIntent();
-        String legendsJson = intent.getStringExtra("legendsKeyName");
-        Legends legend = Singletons.getGson().fromJson(legendsJson, Legends.class);
+        String legendJson = intent.getStringExtra("legendsName");
+        String ab1tJson = intent.getStringExtra("legendsName");
+        String ab1nJson = intent.getStringExtra("legendsName");
+        String ab1dJson = intent.getStringExtra("legendsName");
+        String ab2tJson = intent.getStringExtra("legendsName");
+        String ab2nJson = intent.getStringExtra("legendsName");
+        String ab2dJson = intent.getStringExtra("legendsName");
+        String ab3tJson = intent.getStringExtra("legendsName");
+        String ab3nJson = intent.getStringExtra("legendsName");
+        String ab3dJson = intent.getStringExtra("legendsName");
+        Legends legend = Singletons.getGson().fromJson(legendJson, Legends.class);
         showDetail(legend);
 
     }
 
     private void showDetail(Legends legend) {
         txtDetail.setText("Name : " + legend.getName());
-
+        txtDetail.setText("First Ability : ");
+        txtDetail.setText("Type :" + legend.getAbility_1().getType());
+        txtDetail.setText("Name : " + legend.getAbility_1().getName());
+        txtDetail.setText("Description : " + legend.getAbility_1().getDescription());
+        txtDetail.setText("Second Ability : ");
+        txtDetail.setText("Type :" + legend.getAbility_2().getType());
+        txtDetail.setText("Name : " + legend.getAbility_2().getName());
+        txtDetail.setText("Description : " + legend.getAbility_2().getDescription());
+        txtDetail.setText("Third Ability : ");
+        txtDetail.setText("Type :" + legend.getAbility_3().getType());
+        txtDetail.setText("Name : " + legend.getAbility_3().getName());
+        txtDetail.setText("Description : " + legend.getAbility_3().getDescription());
 
     }
 }
