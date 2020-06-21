@@ -19,6 +19,23 @@ Projet de programmation mobile, dans lequel il faut créer une application qui a
 * Principes SOLID
 * Splash Screen au début
 
-##Fonctionnalités
+## Fonctionnalités
 ### Premier écran
+* Splash qui affiche le logo du jeu Apex Legends
 ![Splash Screen](https://github.com/Laartem/CharApex/blob/master/Images%20Readme/Screenshot_1592777377.png)
+
+### Ecran principal
+* Liste des légendes d'Apex Legends, affichées par appel API la première fois, puis en allant chercher les données en cache les fois suivantes
+![Ecran Principal](https://github.com/Laartem/CharApex/blob/master/Images%20Readme/Screenshot_1592777504.png)
+
+### Ecran de détails
+* Ecran qui s'affiche en cliquant sur une légende, affichant des informations sur ses capacités.
+* J'ai eu quelques soucis avec cette partie, seule une capacité par légende s'affiche
+![Ecran de Details](https://github.com/Laartem/CharApex/blob/master/Images%20Readme/Screenshot_1592777551.png)
+
+
+## Pistes d'amélioration
+* Ajout d'une API pour avoir des news sur le jeu (quand il y a une mise à jour du jeu par exemple).
+* Ajout de notifications push si un nouveau personnage est ajouté à la liste
+* Changement d'affichage
+* Ajout de photos pour chaque personnage
